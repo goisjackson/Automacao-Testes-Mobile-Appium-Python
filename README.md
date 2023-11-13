@@ -8,7 +8,7 @@
 Status: `Andamento`
 
 - **Automação:** Aplicativo Calculadora
-- **Scripts dos testes:** [Repositório no GitHub]()
+- **Scripts dos testes:** [Repositório no GitHub](https://github.com/goisjackson/Automacao-Testes-Mobile-Appium-Python/tree/main/CalculadoraAndroid/Scripts)
 - **Testes Realizados:** <span style="color:green">`02 Testes`</span>
 
 ## Projeto - 02
