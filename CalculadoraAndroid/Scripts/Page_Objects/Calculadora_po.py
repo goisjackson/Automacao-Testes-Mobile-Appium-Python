@@ -20,3 +20,9 @@ class CalculatorPage:
 
     def get_equals(self):
         return self.find_element(By.ID, 'com.android.calculator2:id/eq')
+
+    def get_dot(self):
+        return self.find_element(By.ID, 'com.android.calculator2:id/dec_point')
+
+    def get_del_button(self):
+        return self.find_element(By.ID, 'com.android.calculator2:id/del')
