@@ -15,5 +15,5 @@ Status: `Concluído`
 Status: `Em Andamento`
 
 - **Automação:** Aplicativo Calculadora Android 12.0
-- **Scripts dos testes:** [Repositório no GitHub]()
-- **Testes Realizados:** <span style="color:green">` `</span>
+- **Scripts dos testes:** [Repositório no GitHub](https://github.com/goisjackson/Automacao-Testes-Mobile-Appium-Python/tree/main/CalculadoraAndroid_12)
+- **Testes Realizados:** <span style="color:green">`03 Testes `</span>
