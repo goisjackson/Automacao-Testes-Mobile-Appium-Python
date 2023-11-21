@@ -45,9 +45,26 @@ class CalculadoraPage:
         resultado_elemento = self.driver.find_element(By.ID, 'com.sec.android.app.popupcalculator:id/calc_edt_formula')
         resultado = resultado_elemento.text
 
-        # Usando expressão regular para extrair apenas os números
-        numeros = re.findall(r'\d+', resultado)
+        # Usando expressão regular para extrair números, pontos e vírgulas
+        numeros = re.findall(r'[\d.,]+', resultado)
 
         # Concatenando os números encontrados
         resultado_numerico = ''.join(numeros)
         return resultado_numerico
+
+    # calculadora cientifica
+    def clicar_raiz(self):
+        self.driver.find_element(By.ID, 'com.sec.android.app.popupcalculator:id/calc_keypad_btn_root_another_'
+                                        'font_default').click()
+
+    def clicar_elevado2(self):
+        self.driver.find_element(By.ID, 'com.sec.android.app.popupcalculator:id/calc_keypad_btn_x_2').click()
+
+    def clicar_elevadoy(self):
+        self.driver.find_element(By.ID, 'com.sec.android.app.popupcalculator:id/calc_keypad_btn_x_y').click()
+
+    def clicar_pii(self):
+        self.driver.find_element(By.ID, 'com.sec.android.app.popupcalculator:id/calc_keypad_btn_pie').click()
+
+    def clicar_calculadora_cientifica(self):
+        self.driver.find_element(By.ID, 'com.sec.android.app.popupcalculator:id/calc_handle_btn_rotation').click()
