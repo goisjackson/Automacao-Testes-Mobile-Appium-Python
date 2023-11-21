@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from Testes.PageObject.PO_webdriver import Driver
+from Scripts.PageObject.PO_webdriver import Driver
 
 conectar = Driver()
 

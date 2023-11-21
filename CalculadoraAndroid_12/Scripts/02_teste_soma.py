@@ -1,5 +1,5 @@
-from Testes.PageObject.PO_calculadora import CalculadoraPage
-from Testes.PageObject.PO_webdriver import Driver
+from Scripts.PageObject.PO_calculadora import CalculadoraPage
+from Scripts.PageObject.PO_webdriver import Driver
 
 # Inicia o driver
 conectar = Driver()
