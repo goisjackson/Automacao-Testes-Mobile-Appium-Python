@@ -1,4 +1,5 @@
 from appium import webdriver
+from selenium.webdriver.common.by import By
 
 
 class Driver:
@@ -12,3 +13,6 @@ class Driver:
             "automationName": "uiautomator2"
         }
         self.driver = webdriver.Remote("http://localhost:4723/wd/hub", desired_cap)
+
+    def calculadora_cientifica(self):
+        self.driver.find_element(By.ID, 'com.sec.android.app.popupcalculator:id/calc_handle_btn_rotation').click()
