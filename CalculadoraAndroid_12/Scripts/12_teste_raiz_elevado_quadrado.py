@@ -14,34 +14,33 @@ calculadora_cientifica_page = CalculadoraPage(conectar.driver)
 # Ir para a calculadora científica
 calculadora_cientifica_page.clicar_calculadora_cientifica()
 
-# Aguardar até que o botão de raiz esteja visível antes de clicar
+# Aguardar calculado esteja visível antes de clicar
 WebDriverWait(conectar.driver, 10).until(
     EC.visibility_of_element_located((By.ID, 'com.sec.android.app.popupcalculator:id/calc_keypad_btn_root_another_'
                                              'font_default'))
 )
 
-# Testar raiz quadrada
+# Testar numero elevado ao quadrado
 try:
-    calculadora_cientifica_page.clicar_raiz()
     calculadora_cientifica_page.clicar_numero('4')
-    calculadora_cientifica_page.clicar_numero('9')
+    calculadora_cientifica_page.clicar_elevado2()
     calculadora_cientifica_page.clicar_igual()
 
     # Obtém o resultado numérico
     resultado_numerico = calculadora_cientifica_page.obter_resultado_numerico()
 
     # Imprime o resultado numérico
-    print(f"Resultado da Raiz quadrada: {resultado_numerico}")
+    print(f"Resultado: {resultado_numerico}")
 
     # Verifico se o resultado é o esperado
-    resultado_esperado = '7'
+    resultado_esperado = '16'
     assert resultado_numerico == resultado_esperado, f"Resultado inesperado: {resultado_numerico}"
 
-    print('Teste Raiz quadrada - OK')
+    print('Teste Numero elevado ao quadrado - OK')
 
 except Exception as e:
     print(f'Erro durante a execução do teste: {str(e)}')
-    print('Teste Raiz quadrada - NOK')
+    print('Teste Numero elevado ao quadrado - NOK')
 
 finally:
     conectar.driver.quit()
